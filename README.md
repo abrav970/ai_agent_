@@ -1,15 +1,15 @@
 # ai_agent_
 
 ## Project Overview
-The AI AGENT application allows users to upload a CSV file containing company names, input a custom query template with placeholders, and scrape the web using SerpAPI to extract relevant information. It then uses the Groq API to extract email addresses from the scraped data and appends the results back to the original CSV file.
+The AI AGENT application allows users to upload a CSV file, input a custom query template with placeholders, and scrape the web using SerpAPI to extract relevant information. It then uses the Groq API to extract information from the scraped data and appends the results back to the original CSV file.
 
 ### Key Features:
-- **Upload CSV**: Upload a CSV file containing company names.
-- **Select Column**: Choose the column with company names to query.
+- **Upload CSV**: Upload a CSV file.
+- **Select Column**: Choose the column to query.
 - **Input Custom Query**: Enter a query template to dynamically generate search queries.
+-  **Input extraction type**:  Asks the user what type of data they want to extract (e.g., email, phone number, address,etc..).
 - **Web Scraping**: Use SerpAPI to scrape search results for each query.
-- **Email Extraction**: Extract emails from the snippets using the Groq API.
-- **Download Updated CSV**: Download the original CSV with extracted emails and source URLs.
+- **Download Updated CSV**: Download the original CSV with extracted information and source URLs.
 
 ## Setup Instructions
 
@@ -41,13 +41,15 @@ streamlit run app.py
 
 ## Usage Guide
 
-1. **Upload a CSV file**: The first step is to upload a CSV file containing company names. The app will display the content of the CSV file for you to review.
+1. **Upload a CSV file**: The first step is to upload a CSV file. The app will display the content of the CSV file for you to review.
    
-2. **Select Column with Company Names**: Choose the column that contains the company names. The application will generate queries using these names.
+2. **Select Column**: Choose the column . The application will generate queries using these names.
 
-3. **Enter Query Template**: In the text input box, enter a query template. Use `{company}` as a placeholder for the company names. For example:
+3. **Enter Query Template**: In the text input box, enter a query template. Use `{company}` as a placeholder. For example:
 "Find contact details for {company}"
 
-4. **Scrape the Web**: The application will send requests to SerpAPI to search for each query and retrieve the results. It will then use the Groq API to extract email addresses from the search snippets.
+4.**Input extraction type**: Asks the user what type of data they want to extract (e.g., email, phone number, address). 
 
-5. **Download the Updated CSV**: After the emails and source URLs have been extracted, the updated CSV file will be displayed, and you can download it by clicking the "Download Updated CSV" button.
+5. **Scrape the Web**: The application will send requests to SerpAPI to search for each query and retrieve the results. It will then use the Groq API to extract information from the search snippets.
+
+6. **Download the Updated CSV**: After the emails and source URLs have been extracted, the updated CSV file will be displayed, and you can download it by clicking the "Download Updated CSV" button.
