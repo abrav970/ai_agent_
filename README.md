@@ -55,4 +55,4 @@ streamlit run app.py
 6. **Download the Updated CSV**: After the emails and source URLs have been extracted, the updated CSV file will be displayed, and you can download it by clicking the "Download Updated CSV" button.
 
 
-**link to the video https://drive.google.com/file/d/17nah8QykdPa5nM5epQkPmN9ruHXcYLHg/view?usp=drive_link
+
